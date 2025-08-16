@@ -31,3 +31,9 @@ list = [
 print("WITHOUT INDEXING \n",pd.DataFrame(list))
 
 print("WITH INDEXING \n",pd.DataFrame(list, columns=['Name', 'Age', 'City', 'Salary']))
+
+
+#SELECTION AND INDEXING OF COLUMNS
+df=pd.DataFrame(list)
+print("SELECTING COLUMNS \n", df[0])  # Selecting a single column
+
