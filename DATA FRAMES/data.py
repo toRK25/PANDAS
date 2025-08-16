@@ -30,10 +30,12 @@ list = [
 ]
 print("WITHOUT INDEXING \n",pd.DataFrame(list))
 
-print("WITH INDEXING \n",pd.DataFrame(list, columns=['Name', 'Age', 'City', 'Salary']))
+columns = ["Name", "Age", "City", "Salary"]
+
+df = pd.DataFrame(list,columns=columns)
+print(df)
 
 
 #SELECTION AND INDEXING OF COLUMNS
-df=pd.DataFrame(list)
-print("SELECTING COLUMNS \n", df[0])  # Selecting a single column
+print("SELECTING COLUMNS \n", df['Name'])  # Selecting a single column
 
