@@ -19,5 +19,7 @@ df2 = pd.DataFrame({
 
 print("\nSecond DataFrame:\n", df2)
 
-con = pd.concat([df1, df2], ignore_index=True)
+con = pd.concat([df1, df2], ignore_index=True) #on the basis of column(default)
+#if you want to concatenate on the basis of index, use axis=1
+# con = pd.concat([df1, df2], axis=1)
 print("\nConcatenated DataFrame:\n", con)
