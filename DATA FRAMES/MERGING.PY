@@ -24,6 +24,14 @@ print("\nSalaries DataFrame:\n", salaries)
 
 df = pd.merge (employees, salaries)
 print("\nMerged DataFrame:\n", df)
-#merge all dataframes rows
+# #merge all dataframes rows
 df_all = pd.merge(employees, salaries, how='outer')
 print("\nMerged DataFrame with all rows:\n", df_all)
+
+# Merge with salaries
+df2 = pd.merge(employees, salaries, how='left')
+print("\nLeft Join DataFrame:\n", df2)
+
+#merge with employee id
+df3 = pd.merge(employees, salaries, how='right')
+print("\nRight Join DataFrame:\n", df3)
