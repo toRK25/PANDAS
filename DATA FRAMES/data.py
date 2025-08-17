@@ -52,3 +52,11 @@ print('\n',df) # experience is still there if you need to remove it permanently 
 #rows
 
 print(df.loc[0])  # Selecting a single row by index
+fru=df.loc[[0,1]][['Name', 'City']]  # Selecting multiple rows and specific columns
+print('\n',fru)
+
+
+#conditional seelction= only want to see those people live in newyork
+print(df)
+print(df[df['City'] == 'New York'])  # Conditional selection based on a column value
+print(df[(df['Salary'] > 63000) & (df['Age'] > 30)])  # Conditional selection with multiple conditions
