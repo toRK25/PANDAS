@@ -22,4 +22,8 @@ salaries = pd.DataFrame({
 
 print("\nSalaries DataFrame:\n", salaries)
 
-df = pd.merge
+df = pd.merge (employees, salaries)
+print("\nMerged DataFrame:\n", df)
+#merge all dataframes rows
+df_all = pd.merge(employees, salaries, how='outer')
+print("\nMerged DataFrame with all rows:\n", df_all)
