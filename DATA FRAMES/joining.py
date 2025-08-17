@@ -2,22 +2,18 @@
 import numpy as np      
 import pandas as pd
 
-employees = pd.DataFrame({
-    'employee_id': [1, 2, 3, 4, 5],
-    'name': ['John', 'Anna', 'Peter', 'Linda', 'Bob'],
-    'department': ['HR', 'IT', 'Finance', 'IT', 'HR']
+grades = pd.DataFrame({
+    'student': ['Alice', 'Bob', 'Charlie', 'David'],
+    'math': [85, 90, 78, 92],
+    'science': [88, 76, 95, 89]
 })
 
-print("Employees DataFrame:\n", employees)
 
-# DataFrame 2: Salary information
-salaries = pd.DataFrame({
-    'employee_id': [1, 2, 3, 6, 7],
-    'salary': [60000, 80000, 65000, 70000, 90000],
-    'bonus': [5000, 10000, 7000, 8000, 12000]
+sales = pd.DataFrame({
+    'product': ['A', 'B', 'C', 'D'],
+    'units_sold': [100, 150, 200, 130],
+    'price': [10, 15, 20, 12]
 })
 
-print("\nSalaries DataFrame:\n", salaries)
-
-df = employees.join(salaries)
+df = grades.join(sales)
 print("\nJoined DataFrame:\n", df)
