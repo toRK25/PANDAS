@@ -1,11 +1,3 @@
-#creating a dataframe
-# SELECTION AND INDEXING OF COLUMNS
-# CREATING NEW COLUMNS
-# REMOVING COLUMNS 
-# SELECTING ROWS
-# SELECTING SUBSET OF ROWS AND COLUMNS
-# CONDITIONAL SELECTION
-
 import numpy as np
 import pandas as pd
 
@@ -42,20 +34,27 @@ print(df[['Name', 'City']])# Selecting multiple columns
 print('\n',df.Name)  # Another way to select a single column
 # CREATING NEW COLUMNS
 df['Experience'] = [5, 10, 3, 15]  # Adding a new column
+
+
+# REMOVING COLUMNS 
 print('\n',df) 
 print(df.drop('Experience', axis=1 ,inplace =True))  # Removing a column permanently
 # print(df.drop('Experience', axis=1))  # Removing a column (note: use drop() method, not drop[])
-print('\n',df) # experience is still there if you need to remove it permanently use keyword INPLACE = True
+print('\n',df) # experience is still there if you need to remove it permanently use keyword INPLACE = True #for removing rows u just do axis = 0
 
-#for removing rows u just do axis = 0
 
-#rows
 
+# SELECTING SUBSET OF ROWS AND COLUMNS
 print(df.loc[0])  # Selecting a single row by index
 fru=df.loc[[0,1]][['Name', 'City']]  # Selecting multiple rows and specific columns
 print('\n',fru)
 
 
+
+
+
+
+# CONDITIONAL SELECTION
 #conditional seelction= only want to see those people live in newyork
 print(df)
 print(df[df['City'] == 'New York'])  # Conditional selection based on a column value
