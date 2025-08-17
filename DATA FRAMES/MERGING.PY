@@ -35,3 +35,4 @@ print("\nLeft Join DataFrame:\n", df2)
 #merge with employee id
 df3 = pd.merge(employees, salaries, how='right')
 print("\nRight Join DataFrame:\n", df3)
+
