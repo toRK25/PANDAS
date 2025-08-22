@@ -15,3 +15,12 @@ data = {
 }
 
 df = pd.DataFrame(data)
+print("Original DataFrame:\n", df)
+
+fog = pd.pivot_table(df,values = ['Sales', 'Units'],
+                    index = ['Region'],
+                    columns = ['Product'])
+print("\nPivot Table:\n", fog)
+
+dop = pd.crosstab(df['Region'], df['Product'])
+print("\nCrosstab:\n", dop)
