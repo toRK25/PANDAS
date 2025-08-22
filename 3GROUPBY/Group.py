@@ -10,4 +10,12 @@ data = {
 }
 
 df = pd.DataFrame(data)
-print("Original DataFrame:\n", df)
+# print("Original DataFrame:\n", df)
+
+#group by catogaries and sum of sales
+grouped = df.groupby('Category')['Sales'].sum()
+print("\nGrouped DataFrame:\n", grouped)
+
+#multiple group by
+dog = df.groupby(['Category', 'Store'])['Sales'].sum()
+print("\nGrouped by Category and Store:\n", dog)
